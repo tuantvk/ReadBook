@@ -3,4 +3,5 @@ export default {
   MY_BOOKS_SHELF: 'MY_BOOKS_SHELF',
   PROFILE: 'PROFILE',
   SAVE: 'SAVE',
+  SCANNER: 'SCANNER',
 }

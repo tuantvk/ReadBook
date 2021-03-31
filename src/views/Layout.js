@@ -6,9 +6,19 @@ import {
 } from 'react-native';
 import { colors } from '../constants';
 
-const Layout = ({ children }) => {
+const Layout = ({
+  children,
+  bgColor,
+}) => {
   return (
-    <View style={styles.layout}>
+    <View
+      style={[
+        {
+          backgroundColor: bgColor || colors.white,
+        },
+        styles.layout,
+      ]}
+    >
       <StatusBar
         animated
         barStyle="dark-content"
@@ -22,7 +32,6 @@ const Layout = ({ children }) => {
 const styles = StyleSheet.create({
   layout: {
     flex: 1,
-    backgroundColor: colors.white,
   },
 });
 

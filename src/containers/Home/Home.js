@@ -10,8 +10,14 @@ import { colors, fontSize } from '../../constants';
 import { scale } from '../../utils/resolutions';
 import { Books } from './components';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import routes from '../../routes';
 
-const Home = () => {
+const Home = ({ navigation }) => {
+
+  const gotoRoute = route => {
+    navigation.navigate(route);
+  }
+
   return (
     <Layout>
       <View style={styles.header}>
@@ -30,7 +36,10 @@ const Home = () => {
             placeholder="Search..."
             style={styles.inputSearch}
           />
-          <Button style={[styles.icon, styles.iconScan]}>
+          <Button
+            style={[styles.icon, styles.iconScan]}
+            onPress={() => gotoRoute(routes.SCANNER)}
+          >
             <Ionicons
               size={20}
               name="md-scan-outline"
