@@ -4,4 +4,5 @@ export default {
   PROFILE: 'PROFILE',
   SAVE: 'SAVE',
   SCANNER: 'SCANNER',
+  FIND_BOOK: 'FIND_BOOK',
 }

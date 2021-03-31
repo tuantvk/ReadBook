@@ -12,9 +12,10 @@ const CardBook = ({
   image,
   title,
   author,
+  onPress,
 }) => {
   return (
-    <Button style={styles.card}>
+    <Button style={styles.card} {...{ onPress }}>
       <Image
         source={{ uri: image }}
         style={styles.image}

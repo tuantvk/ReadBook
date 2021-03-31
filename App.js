@@ -14,6 +14,21 @@ import MyBookshelf from './src/containers/MyBookshelf';
 import Profile from './src/containers/Profile';
 import Save from './src/containers/Save';
 import Scanner from './src/containers/Scanner';
+import FindBook from './src/containers/FindBook';
+
+const HomeStack = createStackNavigator();
+
+const HomeStackScreen = () => {
+  return (
+    <HomeStack.Navigator
+      initialRouteName={routes.HOME}
+      headerMode="none"
+    >
+      <HomeStack.Screen name={routes.HOME} component={Home} />
+      <HomeStack.Screen name={routes.FIND_BOOK} component={FindBook} />
+    </HomeStack.Navigator>
+  );
+}
 
 const Tab = createBottomTabNavigator();
 
@@ -28,7 +43,7 @@ const HomeTabs = () => {
     >
       <Tab.Screen
         name={routes.HOME}
-        component={Home}
+        component={HomeStackScreen}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color }) => (

@@ -9,12 +9,20 @@ import { fontSize } from '../../../constants';
 import { scale } from '../../../utils/resolutions';
 import BOOKS from './data_books';
 import CardBook from './CardBook';
+import routes from '../../../routes';
+import { useNavigation } from '@react-navigation/native';
 
 const Books = () => {
+  const navigation = useNavigation();
+
+  const gotoFindBook = () => {
+    navigation.navigate(routes.FIND_BOOK);
+  }
 
   const _renderItem = ({ item }) => (
     <CardBook
       {...item}
+      onPress={gotoFindBook}
     />
   );
 
