@@ -1,4 +1,5 @@
 export default {
+  white: '#ffffff',
   lightRed: '#ff6969',
 
   systemGray1: '#444444',
